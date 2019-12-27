@@ -1,0 +1,224 @@
+h3 {
+    font-size: 2rem;
+}
+.container{
+    display: grid;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1px 876px auto auto;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "p p p p p i i i i i i i"
+        "c c c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+    margin: auto;
+    grid-column-gap: 30px;
+}
+.iphonePreview{
+    background-image: url(../images/iphone_black.png);
+    background-size: 400px;
+    margin-top: 68px;
+    grid-area: p / p / p / p;
+    background-repeat: no-repeat;
+}
+.iphoneScreen{
+    width: 349px;
+    clip-path: url(#screenMask);
+    margin-left: 26px;
+    margin-top: 23px;
+}
+.iphoneScreen > div {
+    padding-bottom: 216.425% !important;
+}
+.appInfo {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 140px;
+    align-content: flex-start;
+    grid-area: i / i / i / i;
+}
+.appIcon {
+    display: flex;
+}
+.ImageIcon {
+    width: 120px;
+    height: 120px;
+}
+.appTitle{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-left: 30px;
+    flex: 0 1 auto;
+}
+.appName{
+    color:white;
+}
+.appDescription{
+    font-size: 1.5rem;
+    font-weight: normal;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 45px;
+    line-height: 1.5;
+    flex: 0 1 auto;
+}
+.appDescriptionText{
+    color:white
+}
+.downloadButtons{
+    display: inline-block;
+    margin-top: 42px;
+}
+.ImagePlayStore{
+    height: 75px;
+    margin-right: 24px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 255px;
+}
+.ImageAppleStore{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 220px;
+    height: 75px;
+}
+.features{
+    display: flex;
+    align-content: flex-start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-flex: 1;
+    flex-wrap: wrap;
+    margin-top: 93px;
+    grid-area: c / c / c / c;
+    flex: 1 1 auto;
+}
+.feature{
+    display: flex;
+    padding-top: 63px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: calc(33.3333%);
+}
+.featureText {
+    margin-left: 18px;
+}
+.featureText > h3{
+    color: #2B3B4B;
+}
+.featureText > p {
+    color: rgb(102, 102, 102);
+    margin-top: 8px;
+    line-height: 1.5;
+}
+.test > svg{
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2.5em !important;
+}
+.feature:nth-child(-n+3) {
+    padding-top: 0px;
+}
+.feature:nth-child(3n) {
+    padding-right: 0px;
+}
+.feature:nth-child(3n+1) {
+    padding-left: 0px;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-content: center;
+    grid-area: f / f / f / f;
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footerText{
+    color: rgb(102, 102, 102);
+    display: block;
+    line-height: 1.5;
+    width: 100%;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+@media only screen and (max-width: 992px){
+    .appInfo {
+        padding-top: 50px;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 992px){
+    .features {
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 11px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .iphoneScreen {
+        width: 226px;
+        height: 488px;
+        clip-path: url(#screenMask);
+        margin: 17px 0px 0px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .iphonePreview {
+        display: flex;
+        background-size: 260px;
+        margin-top: 47px;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding-bottom: 75px;
+        background-position: center 0px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .appTitle {
+        width: 100%;
+        margin-left: 0px;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 992px){
+    .downloadButtons {
+        text-align: center;
+    }
+}
+
+    @media only screen and (max-width: 992px){
+    .container {
+        grid-template-rows: 115px auto auto auto auto;
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "i i i i i i i i i i i i"
+            "p p p p p p p p p p p p"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+        grid-column-gap: 0px;
+    }
+}
