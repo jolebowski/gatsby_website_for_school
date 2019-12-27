@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "../components/image"
 import ImageIcon from "../components/imageIcon"
+import ImagePlayStore from "../components/imagePlayStore"
 import ImageAppleStore from "../components/imageAppleStore"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -59,6 +60,9 @@ const Layout = () => {
               <p className='appDescriptionText'>Ne perdez pu de temps à chercher votre salle !</p>
             </div>
             <div className="downloadButtons">
+              <a href='#'>
+                <ImagePlayStore />
+              </a>
               <a href='#'>
                 <ImageAppleStore />
               </a>
