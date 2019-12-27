@@ -10,6 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "../components/image"
 import ImageIcon from "../components/imageIcon"
+import ImagePlayStore from "../components/imagePlayStore"
+import ImageAppleStore from "../components/imageAppleStore"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 import { d } from "../utils/svg"
 
@@ -55,40 +59,72 @@ const Layout = () => {
             <div className="appDescription">
               <p className='appDescriptionText'>Ne perdez pu de temps à chercher votre salle !</p>
             </div>
+            <div className="downloadButtons">
+              <a href='#'>
+                <ImagePlayStore />
+              </a>
+              <a href='#'>
+                <ImageAppleStore />
+              </a>
+            </div>
           </div>
           <div class="features">
             <div class="feature">
-              <div class="featureText">
+              <div>
+                <span class="fa-stack fa-1x">
+                  <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                  <i class="iconTop fas fa-star-and-crescent fa-stack-1x"></i>
+                </span></div><div class="featureText">
                 <h3>Emploi du temps</h3>
                 <p>L'emploi du temps de votre formation directement disponible sur l'application.</p>
               </div>
             </div>
             <div class="feature">
-              <div class="featureText">
+              <div>
+                <span class="fa-stack fa-1x">
+                  <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                  <i class="iconTop fas fa-star-and-crescent fa-stack-1x"></i>
+                </span></div><div class="featureText">
                 <h3>Communication</h3>
                 <p>Dialoguer pour mieux acceuillir les nouveaux arrivants.</p>
               </div>
             </div>
             <div class="feature">
-              <div class="featureText">
+              <div>
+                <span class="fa-stack fa-1x">
+                  <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                  <i class="iconTop fas fa-star-and-crescent fa-stack-1x"></i>
+                </span></div><div class="featureText">
                 <h3>Les salles de cours</h3>
                 <p>Plus besoin de perdre du temps à chercher le numéro de la salle de cours.</p>
               </div>
             </div>
             <div class="feature">
-              <div class="featureText">
+              <div>
+                <span class="fa-stack fa-1x">
+                  <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                  <i class="iconTop fas fa-star-and-crescent fa-stack-1x"></i>
+                </span></div><div class="featureText">
                 <h3>Fil d'actualité</h3>
                 <p>Possiblité de suivre l'actualité de son école afin de louper aucun événement.</p>
               </div>
             </div>
             <div class="feature">
-              <div class="featureText">
+              <div>
+                <span class="fa-stack fa-1x">
+                  <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                  <i class="iconTop fas fa-star-and-crescent fa-stack-1x"></i>
+                </span></div><div class="featureText">
                 <h3>Bons plans</h3>
                 <p>Partagez vos meilleurs bons plans.</p>
               </div>
             </div>
             <div class="feature">
-              <div class="featureText">
+              <div>
+                <span class="fa-stack fa-1x">
+                  <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                  <i class="iconTop fas fa-star-and-crescent fa-stack-1x"></i>
+                </span></div><div class="featureText">
                 <h3>Gestions</h3>
                 <p>Gérer les classes et les cours en une seule fois.</p>
               </div>
