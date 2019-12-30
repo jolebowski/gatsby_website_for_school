@@ -30,11 +30,11 @@ const Layout = () => {
     }
 
     query {
-      image1: file(relativePath: { eq: "imagePlayStore.jpg" }) {
+      image1: file(relativePath: { eq: "playStore.jpg" }) {
         ...servicesImage
       }
 
-      image2: file(relativePath: { eq: "imageAppleStore.jpg" }) {
+      image2: file(relativePath: { eq: "appleStore.jpg" }) {
         ...servicesImage
       }
     }
