@@ -69,10 +69,10 @@ const Layout = () => {
             </div>
             <div className="downloadButtons">
               <a href='#'>
-                <Img fluid={data.image1.childImageSharp.fluid} className="ImagePlayStore" />
+                {data.image1 && <Img fluid={data.image1.childImageSharp.fluid} className="ImagePlayStore" />}
               </a>
               <a href='#'>
-                <Img fluid={data.image2.childImageSharp.fluid} className="ImageAppleStore" />
+                {data.image2 && <Img fluid={data.image2.childImageSharp.fluid} className="ImageAppleStore" />}
               </a>
             </div>
           </div>
