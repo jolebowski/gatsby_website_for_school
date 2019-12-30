@@ -7,13 +7,12 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import Image from "../components/image"
 import ImageIcon from "../components/imageIcon"
-import ImagePlayStore from "../components/imagePlayStore"
-import ImageAppleStore from "../components/imageAppleStore"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
+
+
 
 import { d } from "../utils/svg"
 
@@ -22,18 +21,27 @@ import "./layout.css"
 
 const Layout = () => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+    fragment servicesImage on File {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
         }
+      }
+    }
+
+    query {
+      image1: file(relativePath: { eq: "imagePlayStore.jpg" }) {
+        ...servicesImage
+      }
+
+      image2: file(relativePath: { eq: "imageAppleStore.jpg" }) {
+        ...servicesImage
       }
     }
   `)
 
   return (
     <>
-      {/*<Header siteTitle={data.site.siteMetadata.title} />$*/}
       <div
         style={{
           backgroundColor: `#8CC7B1`,
@@ -61,10 +69,10 @@ const Layout = () => {
             </div>
             <div className="downloadButtons">
               <a href='#'>
-                <ImagePlayStore />
+                <Img fluid={data.image1.childImageSharp.fluid} className="ImagePlayStore" />
               </a>
               <a href='#'>
-                <ImageAppleStore />
+                <Img fluid={data.image2.childImageSharp.fluid} className="ImageAppleStore" />
               </a>
             </div>
           </div>
