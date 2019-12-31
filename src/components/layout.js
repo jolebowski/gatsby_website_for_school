@@ -77,9 +77,9 @@ const Layout = () => {
             <div className="downloadButtons">
               <a href='#'>
               </a>
-              {<a href='#'>
+              {/*<a href='#'>
                 <Img fluid={data.image2.childImageSharp.fluid} className="ImageAppleStore" />
-              </a>}
+      </a>*/}
             </div>
           </div>
           <div class="features">
