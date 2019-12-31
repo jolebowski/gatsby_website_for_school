@@ -10,7 +10,7 @@ import Img from "gatsby-image"
 
 import PropTypes from "prop-types"
 import Image from "../components/image"
-import ImageAppleStore from "../components/imageAppleStore"
+import ImageAppleStore from "../components/imageAppleStore.js"
 
 //import PictureAppleStore from "../components/pictureAppleStore"
 //import ImageIcon from "../components/imageIcon"
