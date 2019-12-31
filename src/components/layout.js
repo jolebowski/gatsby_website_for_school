@@ -9,9 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "../components/image"
 import ImageIcon from "../components/imageIcon"
+import PictureAppleStore from "../components/pictureAppleStore"
+
 //import Img from "gatsby-image"
 //import { useStaticQuery, graphql } from "gatsby"
-import ImgAppleStore from "../components/imgAppleStore"
+//import ImgAppleStore from "../components/imgAppleStore"
 
 
 import { d } from "../utils/svg"
@@ -69,7 +71,7 @@ const Layout = () => {
             </div>
             <div className="downloadButtons">
               <a href='#'>
-                <ImgAppleStore />
+                <PictureAppleStore />
               </a>
               {/*<a href='#'>
                 <Img fluid={data.image2.childImageSharp.fluid} className="ImageAppleStore" />
