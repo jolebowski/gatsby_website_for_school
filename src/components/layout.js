@@ -11,9 +11,11 @@ import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import Image from "../components/image"
 import ImageAppleStore from "../components/imageAppleStore.js"
+import ImagePlayStore from "../components/imagePlayStore.js"
+
 
 //import PictureAppleStore from "../components/pictureAppleStore"
-//import ImageIcon from "../components/imageIcon"
+import ImageIcon from "../components/imageIcon"
 
 import { useStaticQuery, graphql } from "gatsby"
 //import ImgAppleStore from "../components/imgAppleStore"
@@ -67,6 +69,7 @@ const Layout = () => {
           </div>
           <div className="appInfo">
             <div className="appIcon">
+              <ImageIcon />
             </div>
             <div className="appTitle">
               <h1 className='appName'>Camp'us</h1>
@@ -78,9 +81,9 @@ const Layout = () => {
               <a href='#'>
                 <ImageAppleStore />
               </a>
-              {/*<a href='#'>
-                <Img fluid={data.image2.childImageSharp.fluid} className="ImageAppleStore" />
-      </a>*/}
+              <a href='#'>
+                <ImagePlayStore />
+              </a>
             </div>
           </div>
           <div class="features">
