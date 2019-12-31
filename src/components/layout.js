@@ -6,14 +6,20 @@
  */
 
 import React from "react"
+import Img from "gatsby-image"
+
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import Image from "../components/image"
+import ImageAppleStore from "../components/imageAppleStore.js"
+import ImagePlayStore from "../components/imagePlayStore.js"
+
+
+//import PictureAppleStore from "../components/pictureAppleStore"
 import ImageIcon from "../components/imageIcon"
-import ImagePlayStore from "../components/imagePlayStore"
-import ImageAppleStore from "../components/imageAppleStore"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+import { useStaticQuery, graphql } from "gatsby"
+//import ImgAppleStore from "../components/imgAppleStore"
+
 
 import { d } from "../utils/svg"
 
@@ -21,19 +27,31 @@ import { d } from "../utils/svg"
 import "./layout.css"
 
 const Layout = () => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+  /*const data = useStaticQuery(graphql`
+    fragment servicesImage on File {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-  `)
+
+    query {
+      image1: file(relativePath: { eq: "playStore.jpg" }) {
+        ...servicesImage
+      }
+
+      image2: file(relativePath: { eq: "appleStore.jpg" }) {
+        ...servicesImage
+      }
+      image3: file(relativePath: { eq: "logo.png" }) {
+        ...servicesImage
+      }
+    }
+  `)*/
 
   return (
     <>
-      {/*<Header siteTitle={data.site.siteMetadata.title} />$*/}
       <div
         style={{
           backgroundColor: `#8CC7B1`,
@@ -61,10 +79,10 @@ const Layout = () => {
             </div>
             <div className="downloadButtons">
               <a href='#'>
-                <ImagePlayStore />
+                <ImageAppleStore />
               </a>
               <a href='#'>
-                <ImageAppleStore />
+                <ImagePlayStore />
               </a>
             </div>
           </div>

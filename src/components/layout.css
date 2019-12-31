@@ -75,15 +75,16 @@ h3 {
     display: inline-block;
     margin-top: 42px;
 }
-.ImagePlayStore{
+.imagePlayStore{
     height: 75px;
     margin-right: 24px;
     position: relative;
     overflow: hidden;
     display: inline-block;
     width: 255px;
+    margin-left: 10px;
 }
-.ImageAppleStore{
+.imageAppleStore{
     position: relative;
     overflow: hidden;
     display: inline-block;
