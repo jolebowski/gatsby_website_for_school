@@ -6,50 +6,17 @@
  */
 
 import React from "react"
-import Img from "gatsby-image"
 
 import PropTypes from "prop-types"
 import Image from "../components/image"
 import ImageAppleStore from "../components/imageAppleStore.js"
 import ImagePlayStore from "../components/imagePlayStore.js"
-
-
-//import PictureAppleStore from "../components/pictureAppleStore"
 import ImageIcon from "../components/imageIcon"
-
-import { useStaticQuery, graphql } from "gatsby"
-//import ImgAppleStore from "../components/imgAppleStore"
-
-
 import { d } from "../utils/svg"
 
-//import Header from "./header"
 import "./layout.css"
 
 const Layout = () => {
-  /*const data = useStaticQuery(graphql`
-    fragment servicesImage on File {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-
-    query {
-      image1: file(relativePath: { eq: "playStore.jpg" }) {
-        ...servicesImage
-      }
-
-      image2: file(relativePath: { eq: "appleStore.jpg" }) {
-        ...servicesImage
-      }
-      image3: file(relativePath: { eq: "logo.png" }) {
-        ...servicesImage
-      }
-    }
-  `)*/
-
   return (
     <>
       <div
@@ -70,9 +37,6 @@ const Layout = () => {
           <div className="appInfo">
             <div className="appIcon">
               <ImageIcon />
-            </div>
-            <div className="appTitle">
-              <h1 className='appName'>Camp'us</h1>
             </div>
             <div className="appDescription">
               <p className='appDescriptionText'>Ne perdez pu de temps à chercher votre salle !</p>
