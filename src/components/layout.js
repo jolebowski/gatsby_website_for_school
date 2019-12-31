@@ -9,9 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "../components/image"
 import ImageIcon from "../components/imageIcon"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
-
+//import Img from "gatsby-image"
+//import { useStaticQuery, graphql } from "gatsby"
+import ImgAppleStore from "../components/imgAppleStore"
 
 
 import { d } from "../utils/svg"
@@ -20,7 +20,7 @@ import { d } from "../utils/svg"
 import "./layout.css"
 
 const Layout = () => {
-  const data = useStaticQuery(graphql`
+  /*const data = useStaticQuery(graphql`
     fragment servicesImage on File {
       childImageSharp {
         fluid(maxWidth: 300) {
@@ -38,7 +38,7 @@ const Layout = () => {
         ...servicesImage
       }
     }
-  `)
+  `)*/
 
   return (
     <>
@@ -69,11 +69,11 @@ const Layout = () => {
             </div>
             <div className="downloadButtons">
               <a href='#'>
-                <Img fluid={data.image1.childImageSharp.fluid} className="ImagePlayStore" />
+                <ImgAppleStore />
               </a>
-              <a href='#'>
+              {/*<a href='#'>
                 <Img fluid={data.image2.childImageSharp.fluid} className="ImageAppleStore" />
-              </a>
+              </a>*/}
             </div>
           </div>
           <div class="features">
