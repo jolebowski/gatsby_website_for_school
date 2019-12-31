@@ -10,6 +10,8 @@ import Img from "gatsby-image"
 
 import PropTypes from "prop-types"
 import Image from "../components/image"
+import ImageAppleStore from "../components/imageAppleStore"
+
 //import PictureAppleStore from "../components/pictureAppleStore"
 //import ImageIcon from "../components/imageIcon"
 
@@ -23,7 +25,7 @@ import { d } from "../utils/svg"
 import "./layout.css"
 
 const Layout = () => {
-  const data = useStaticQuery(graphql`
+  /*const data = useStaticQuery(graphql`
     fragment servicesImage on File {
       childImageSharp {
         fluid(maxWidth: 300) {
@@ -44,11 +46,10 @@ const Layout = () => {
         ...servicesImage
       }
     }
-  `)
+  `)*/
 
   return (
     <>
-      {console.log(data)}
       <div
         style={{
           backgroundColor: `#8CC7B1`,
@@ -66,7 +67,6 @@ const Layout = () => {
           </div>
           <div className="appInfo">
             <div className="appIcon">
-              {data.image3 && <Img fluid={data.image3.childImageSharp.fluid} className="ImageAppleStore" />}
             </div>
             <div className="appTitle">
               <h1 className='appName'>Camp'us</h1>
@@ -76,6 +76,7 @@ const Layout = () => {
             </div>
             <div className="downloadButtons">
               <a href='#'>
+                <ImageAppleStore />
               </a>
               {/*<a href='#'>
                 <Img fluid={data.image2.childImageSharp.fluid} className="ImageAppleStore" />
